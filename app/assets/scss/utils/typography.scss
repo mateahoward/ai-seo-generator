@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #fff3e3 0%, #ffe3ec 100%);
+  background-attachment: fixed;
+
+  font-family:
+    'Montserrat',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1e293b; /* A soft slate-dark gray that reads beautifully over light gradients */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
