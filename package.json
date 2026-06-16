@@ -9,6 +9,13 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "optionalDependencies": {
+    "rolldown-darwin-arm64": "latest",
+    "rolldown-darwin-x64": "latest"
+  },
+  "overrides": {
+    "rolldown": "latest"
+  },
   "dependencies": {
     "@google/genai": "^2.8.0",
     "highlight.js": "^11.11.1",
