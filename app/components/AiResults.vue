@@ -78,8 +78,7 @@ defineEmits<{
 
 <style lang="scss" scoped>
 .ai-result {
-  width: 100%;
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 32px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -129,6 +128,7 @@ pre {
   padding: 1.25rem;
   overflow-x: auto;
   background: #0d1117 !important;
+  max-width: 100%;
 }
 
 code.hljs {

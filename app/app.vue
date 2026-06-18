@@ -62,7 +62,7 @@ async function resetForm() {
   <main>
     <header class="header" v-if="!isLoading">
       <span class="header-label text-left"> AI Powered</span>
-      <h1 class="mt-0 text-left">
+      <h1 class="d-flex align-items-center mt-0 flex-wrap text-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
