@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github-dark.css'
+import DOMPurify from 'dompurify'
 
 interface SeoAssets {
   metaTitle: string
@@ -15,15 +16,15 @@ interface Props {
 }
 
 let isCopied = ref(false)
-const props = defineProps<Props>()
+const props = defineProps<{ aiResult: SeoAssets }>()
 
 const rawHtmlSnippet = computed(() => {
   if (!props.aiResult) return ''
   return `
-    <title>${props.aiResult.metaTitle}</title>
-    <meta name="description" content="${props.aiResult.metaDescription}">
-    <link rel="canonical" href="https://example.com/${props.aiResult.urlSlugs[0]}">
-    <meta name="keywords" content="${props.aiResult.metaKeywords.join(', ')}">
+    <title>${DOMPurify.sanitize(props.aiResult.metaTitle)}</title>
+    <meta name="description" content="${DOMPurify.sanitize(props.aiResult.metaDescription)}">
+    <link rel="canonical" href="https://example.com/${DOMPurify.sanitize(props.aiResult.urlSlugs[0])}">
+    <meta name="keywords" content="${DOMPurify.sanitize(props.aiResult.metaKeywords.join(', '))}">
     
   `
 })
