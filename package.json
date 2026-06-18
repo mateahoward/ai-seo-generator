@@ -2,19 +2,16 @@
   "name": "ai-seo-generator",
   "type": "module",
   "private": true,
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
-  },
-  "optionalDependencies": {
-    "rolldown-darwin-arm64": "latest",
-    "rolldown-darwin-x64": "latest"
-  },
-  "overrides": {
-    "rolldown": "latest"
   },
   "dependencies": {
     "@google/genai": "^2.8.0",
@@ -26,7 +23,6 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@rolldown/binding-darwin-arm64": "^1.1.1",
     "@types/dompurify": "^3.0.5",
     "sass-embedded": "^1.100.0"
   }
