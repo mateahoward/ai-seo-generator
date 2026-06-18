@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci && npm rebuild --build-from-source && npm run build"
+  command = "rm -f package-lock.json && npm install && npm run build"
   publish = ".netlify/dist"
 
 [build.environment]
