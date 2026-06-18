@@ -11,10 +11,6 @@ interface SeoAssets {
   urlSlugs: string[]
 }
 
-interface Props {
-  aiResult: SeoAssets
-}
-
 let isCopied = ref(false)
 const props = defineProps<{ aiResult: SeoAssets }>()
 
@@ -23,7 +19,7 @@ const rawHtmlSnippet = computed(() => {
   return `
     <title>${DOMPurify.sanitize(props.aiResult.metaTitle)}</title>
     <meta name="description" content="${DOMPurify.sanitize(props.aiResult.metaDescription)}">
-    <link rel="canonical" href="https://example.com/${DOMPurify.sanitize(props.aiResult.urlSlugs[0])}">
+    <link rel="canonical" href="https://example.com/${DOMPurify.sanitize(props.aiResult.urlSlugs[0] ?? '')}">
     <meta name="keywords" content="${DOMPurify.sanitize(props.aiResult.metaKeywords.join(', '))}">
     
   `

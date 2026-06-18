@@ -11,7 +11,17 @@ interface SeoFormInput {
 }
 
 const seoFormSchema = z.object({
-  site: z.string().url({ message: 'Invalid workspace domain URL structure.' }),
+  site: z.string().refine(
+    (val) => {
+      try {
+        new URL(val)
+        return true
+      } catch {
+        return false
+      }
+    },
+    { message: 'Invalid workspace domain URL structure.' }
+  ), // .string.url() appears to be deprecated in zod v4, so using a custom refinement to validate URL structure
   pageTitle: z.string().min(3).max(150),
   pageTone: z.enum(['formal', 'informal']),
   targetKeywords: z

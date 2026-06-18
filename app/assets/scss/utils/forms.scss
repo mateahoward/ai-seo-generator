@@ -29,6 +29,11 @@ textarea {
     system-ui,
     -apple-system,
     sans-serif;
+
+  &:focus {
+    outline: none;
+    border-color: #6f2c04;
+  }
 }
 
 select {

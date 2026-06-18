@@ -86,8 +86,8 @@ defineEmits<{
         autocapitalize="sentences"
       ></textarea>
 
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center gap-2">
+      <div class="d-flex justify-content-between align-items-center form-footer">
+        <div class="d-flex align-items-center flex-wrap gap-2">
           <div class="d-flex align-items-center text-secondary gap-2">
             <span class="badge rounded-circle bg-secondary text-white">1</span>
             Fill in details
@@ -151,5 +151,13 @@ defineEmits<{
   color: white;
   font-size: 11px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
 }
 </style>
