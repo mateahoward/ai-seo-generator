@@ -1,6 +1,7 @@
 [build]
-  command = "rm -f package-lock.json && npm install && npm run build"
+  command = "npm run build"
   publish = ".netlify/dist"
 
 [build.environment]
   NODE_VERSION = "22"
+  NPM_VERSION = "10.8.2"
