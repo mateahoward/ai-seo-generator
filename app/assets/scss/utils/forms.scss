@@ -1,12 +1,15 @@
+$form-width: 800px;
+$form-text-colour: #6b5744;
+
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: $form-width;
 }
 
 label {
-  color: #0f141d;
+  color: $form-text-colour;
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
 }
@@ -19,8 +22,13 @@ textarea {
   border-radius: 0.25rem;
   border: #c6c6c6 1px solid;
   width: 100%;
-  max-width: 400px; //form width
+  max-width: $form-width;
   margin-bottom: 1rem;
+  font-family:
+    'Montserrat',
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 select {
@@ -33,16 +41,4 @@ select {
   background-position: right 16px center;
   background-size: 16px;
   padding-right: 2.5rem;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-legend {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #0f141d;
 }

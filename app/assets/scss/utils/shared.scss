@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
 .d-flex {
   display: flex;
 }
@@ -65,4 +73,7 @@
 }
 .mr-0 {
   margin-right: 0;
+}
+.bg-secondary {
+  background-color: #6b5744;
 }

@@ -52,8 +52,7 @@ defineEmits<{
 
 <template>
   <div v-if="aiResult" class="ai-result">
-    <div class="snippet-header d-flex justify-content-between align-items-center">
-      <h2 class="mt-0 mb-0">AI Generated SEO Content</h2>
+    <div class="snippet-header d-flex justify-content-end align-items-center">
       <AppButton
         :text="isCopied ? 'Copied! ✓' : 'Copy Snippet'"
         variant="primary"
@@ -73,24 +72,9 @@ defineEmits<{
     <AppButton
       class="back-link"
       @click="$emit('reset')"
-      variant="primary"
-      text="Try Again"
+      variant="outline-primary"
+      text="Generate another"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        style="margin-right: 8px; display: inline-block; vertical-align: text-top"
-      >
-        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-        <polyline points="3 3 3 8 8 8"></polyline>
-      </svg>
     </AppButton>
   </div>
 </template>
@@ -108,12 +92,6 @@ defineEmits<{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-h2 {
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0;
 }
 
 .code-container {
@@ -180,31 +158,5 @@ code.hljs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-
-.slug-badge {
-  background: rgba(18, 52, 102, 0.08);
-  color: #123466;
-  padding: 0.4rem 0.75rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  font-family: monospace;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  align-self: flex-start;
-  color: #123466;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-top: 1rem;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 </style>

@@ -28,22 +28,22 @@ defineProps<AppButtonProps>()
   max-width: 180px;
 
   &.btn-primary {
-    background-color: #063567;
-    color: #fff;
+    color: #fdf0e0;
+    background-color: #893f06;
     border: none;
 
     &:hover {
-      background-color: #031e3a;
+      background-color: #6f2c04;
     }
   }
 
   &.btn-outline-primary {
     background-color: transparent;
-    color: #063567;
-    border: 1px solid #063567;
+    color: #893f06;
+    border: 1px solid #893f06;
 
     &:hover {
-      background-color: #063567;
+      background-color: #893f06;
       color: #fff;
     }
   }
